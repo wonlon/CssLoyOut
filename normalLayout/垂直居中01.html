@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第一种解决方案</title>
+    <style>
+        #parent{
+            width: 200px;
+            height: 800px;
+            background: #cccccc;
+            /* 
+                display属性：
+                table:设置当前元素为<table>元素 
+                table-cell：设置当前元素为<td>元素（单元格）
+
+                父级设置成单元格，单元格的子级元素是可以设置垂直水平居中的
+             */
+            display: table-cell;
+            /* 
+                vertical-align用于设置文本内容的垂直方向对齐方式
+                top:顶部对齐
+                middle：居中对齐
+                bottom：底部对齐
+             */
+            vertical-align: middle;
+        }
+        #child{
+            width: 200px;
+            height: 200px;
+            background: red;
+        
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+           我是父亲的文本
+        <div id="child">
+            第一种垂直定位
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第二种解决方案</title>
+    <style>
+        .prante-fix{
+            overflow: hidden;
+        }
+        .parent {
+            width: 1944px;
+            /* <table> */
+            display: table;
+            margin-left: -40px;
+            /* table-layout: fixed; */
+        }
+
+        .clo1,
+        .clo2,
+        .clo3,
+        .clo4 {
+            /* <td> */
+            display: table-cell;
+            height: 300px;
+            width: 25%;
+            /* box-sizing: border-box; */
+            padding-left: 40px;
+        }
+        .inner{
+            height: 300px;
+        }
+        .clo1 .inner {
+            background: red;
+        }
+
+        .clo2 .inner {
+            background: yellow;
+        }
+
+        .clo3 .inner {
+            background: green;
+        }
+
+        .clo4 .inner {
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="prante-fix">
+        <div class="parent">
+            <div class="clo1">
+                <div class="inner"></div>
+            </div>
+            <div class="clo2">
+                <div class="inner"></div>
+            </div>
+            <div class="clo3">
+                <div class="inner"></div>
+            </div>
+            <div class="clo4">
+                <div class="inner"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

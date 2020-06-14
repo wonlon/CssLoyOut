@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第一种解决方案</title>
+    <style>
+
+        .parent{
+            overflow: hidden;
+        }
+        .left,.right{
+            /* 表格中的单元格模式是等高的 */
+            width: 300px;
+            float: left;
+            padding-bottom: 9999px;
+            margin-bottom: -9999px;
+        }
+        .left{
+            background: red;
+        }
+        .right{
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 作为父级元素 -->
+    <div class="parent">
+        <div class="left">1</div>
+        <div class="right">asdasdaasdasdaasdasdaasda
+            sdaasdasdaasdasdaasdasdaasdasdaasda
+            sdaasdasdaasdasdaasdasdaasdasdaa
+            sdasdaasdasdaasdasdaasdasdaasdasdaasdasdaasdasdaa
+            sdasdaasdasdaasdasdaasdasdaasdasdaasdasdaasdasdaa
+            sdasdaasdasdaasdasdaasdasd
+            aasdasda</div>
+    </div>
+</body>
+
+</html>

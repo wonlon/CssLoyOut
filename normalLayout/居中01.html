@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第一种解决方案</title>
+    <style>
+        #parent{
+            width: 1000px;
+            height: 800px;
+            background: #cccccc;
+            
+            display: table-cell;
+            vertical-align: middle;
+        }
+        #child{
+            width: 200px;
+            height: 200px;
+
+            background: red;
+            /* display: table; */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        
+        <div id="child">
+            我是居中
+        </div>
+    </div>
+</body>
+</html>

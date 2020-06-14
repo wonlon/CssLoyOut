@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第一种解决方案</title>
+    <style>
+        .left,.right,.center{
+            height:300px;
+        }
+        .left{
+           width: 300px;
+           background: red;
+           /* 当前元素脱离文档流 */
+           float: left;
+        }
+        .center{
+            width: 300px;
+            float: left;
+           background: green;
+        }
+        .right{
+            background: #cccccc;
+            margin-left: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right">
+        我是右侧
+    </div>
+</body>
+</html>

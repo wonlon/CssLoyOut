@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第二种解决方案</title>
+    <style>
+        .parent, .parent2{
+            /* column-count:4;
+            column-width: 300px; */
+            columns: 4 100px;
+            /* 设置列与列的间歇 */
+            column-gap: 50px;
+            /* column-rule-width: 10px;
+            column-rule-color: hotpink;
+            column-rule-style: double; */
+            column-rule: 10px hotpink double;
+        }
+        .clo1,.clo2,.clo3,.clo4,.clo5{
+            height: 300px;
+        }
+        .clo1,.clo6{
+            background: red;
+        }
+        .clo2,.clo7{
+            background: yellow;
+        }
+        .clo3,.clo8{
+            background: green;
+        }
+        .clo4,.clo9{
+            background: black;
+        }
+        .clo5{
+            background: indigo;
+            column-span: all;
+        }
+        .clo6,.clo7,.clo8,.clo9{
+            /* 版本的兼容性不好 */
+            column-fill: balance;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        <div class="clo1"></div>
+        <div class="clo2"></div>
+        <div class="clo3"></div>
+        <div class="clo4"></div>
+    </div>
+
+    <div class="parent2">
+       <div class="clo5"></div>
+    </div>
+    <div class="parent">
+            <div class="clo6">
+                    1234567
+                </div>
+                <div class="clo7">
+                        1234567123456712345671234567123456712345671234567
+                        1234567123456712345671234567123456712345671234567
+                        1234567123456712345671234567123456712345671234567
+                        1234567123456712345671234567123456712345671234567
+                        1234567123456712345671234567123456712345671234567
+                        1234567123456712345671234567123456712345671234567
+                        1234567123456712345671234567123456712345671234567
+                        1234567123456712345671234567123456712345671234567
+                </div>
+                <div class="clo8">
+                        1234567
+                </div>
+                <div class="clo9">
+                        1234567
+                </div>
+    </div>
+
+</body>
+</html>

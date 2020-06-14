@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第一种解决方案</title>
+    <style>
+        .left,.right{
+            height:300px;
+        }
+        .left{
+           width: 300px;
+           background: red;
+           /* 当前元素脱离文档流 */
+           float: left;
+           /* 设置显示层级更高 */
+           position: relative;
+        }
+        .right_fix{
+            /* 设置为浮动,导致默认的宽度为0 */
+            float: right;
+            width: 100%;
+            margin-left: -300px;
+        }
+        .right{
+            background: green;
+        }
+        .inner{
+            /* 解决子元素浮动的问题 */
+            height: 300px;
+            background: yellow;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="left"></div>
+    <!-- 为自适应元素定位父级元素 -->
+    <div class="right_fix">
+        <div class="right">
+                <div class="inner"></div>
+        </div>
+    </div>
+</body>
+</html>

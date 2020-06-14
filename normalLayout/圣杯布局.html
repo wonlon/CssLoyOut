@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第一种解决方案</title>
+    <style>
+        .parent{
+            height: 300px;
+            /* 对于left元素的宽度 */
+            margin-left: 300px;
+            /* 对于right元素的宽度 */
+            margin-right: 300px;
+        }
+        .left,.right,.center{
+            height:300px;
+            float: left;
+        }
+        .left,.right{
+           width: 300px;
+        }
+        .left{
+            background: red;
+            /* 将当前元素从当前行，移动上一行同一位置 */
+            margin-left: -100%;
+            /* 使用left，给一个定位 */
+           position: relative;
+           /* 将元素移动到理想位置 */
+           left: -300px;
+        }
+        .center{
+            /* 为父级元素宽度的100% */
+           width: 100%;
+           background: green;
+        }
+        .right{
+            background: #cccccc;
+            margin-left: -300px;
+            position: relative;
+           /* 将元素移动到理想位置 */
+           right: -300px;
+        }
+        .header,.footer{
+            background: salmon;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="parent">
+        <div class="center"></div>
+        <div class="left"></div>
+        <!-- 兄弟元素后面的浮动了，前面的没有浮动，后面的是不会超过前面的 -->
+        <div class="right"></div>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>
